@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — MoneyPit</title>
+<meta name="description" content="Contact MoneyPit support." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header" aria-label="Site header">
+  <div class="nav-float-wrap">
+    <nav aria-label="Primary">
+      <a class="nav-logo" href="index.html"><img src="assets/MP-logo.svg" alt="MoneyPit" class="nav-logo-img" decoding="async" /></a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#pricing">Pricing</a></li>
+        <li><a href="index.html#waitlist" class="nav-cta">Join Waitlist</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+<main class="page-main">
+  <div class="container">
+    <a class="page-back" href="index.html">← Back to home</a>
+    <h1 class="page-title">Contact</h1>
+    <p class="contact-lead">Have a question or feedback? Reach out—we read every message.</p>
+
+    <div class="contact-email-block">
+      <span>Email</span>
+      <a href="mailto:support@mymoneypit.io">support@mymoneypit.io</a>
+    </div>
+
+    <form class="contact-form" id="contact-form" action="#" method="post">
+      <div class="contact-field">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" name="name" autocomplete="name" placeholder="Your name" />
+      </div>
+      <div class="contact-field">
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="you@example.com" />
+      </div>
+      <div class="contact-field">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" required placeholder="How can we help?"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Send message</button>
+      <p class="contact-form-note">Submitting opens your email app with a draft to support@mymoneypit.io.</p>
+    </form>
+  </div>
+</main>
+
+<footer aria-label="Site footer">
+  <div class="container footer-inner">
+    <a href="index.html" class="footer-logo"><img src="assets/MP-logo.svg" alt="MoneyPit" class="footer-logo-img" decoding="async" /></a>
+    <p class="footer-copy">© 2025 MoneyPit. Built by builders.</p>
+    <ul class="footer-links">
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

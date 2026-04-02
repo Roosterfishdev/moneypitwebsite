@@ -16,19 +16,25 @@
 </head>
 <body>
 
-<header aria-label="Site header">
-<nav aria-label="Primary">
-  <div class="container nav-inner">
-    <a class="nav-logo" href="#"><img src="assets/MP-logo.svg" alt="MoneyPit" class="nav-logo-img" decoding="async" /></a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#waitlist" class="nav-cta">Join Waitlist</a></li>
-    </ul>
+<header class="site-header" aria-label="Site header">
+  <div class="nav-float-wrap">
+    <nav aria-label="Primary">
+      <a class="nav-logo" href="index.html"><img src="assets/MP-logo.svg" alt="MoneyPit" class="nav-logo-img" decoding="async" /></a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#waitlist" class="nav-cta">Join Waitlist</a></li>
+      </ul>
+    </nav>
   </div>
-</nav>
 </header>
+<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
 <main id="main-content">
 
@@ -104,80 +110,163 @@
 
 <div class="divider" role="presentation"></div>
 
-<section id="features" aria-label="Features">
+<section id="features" aria-label="Track builds">
   <div class="container">
-    <div class="features-header reveal-section-heading">
-      <div>
-        <span class="t-label">What you get</span>
-        <h2 class="t-heading features-heading" style="margin-top:12px">Everything you need to run your build.</h2>
+    <header class="track-head reveal-section-heading">
+      <div class="track-head-left">
+        <span class="track-kicker">Track builds</span>
+        <h2 class="track-title">Add parts to your build simply by copy pasting the link</h2>
       </div>
-      <p class="features-intro">Nothing you don't. Built by builders, for builders — tools that actually matter in the garage.</p>
-    </div>
+      <p class="track-head-right">Every bolt, every setback, every milestone — all in one place. Not just highlights. Know what you’ve spent, what’s next… and own the blown budget.</p>
+    </header>
+    <div class="track-rule" role="presentation"></div>
 
-    <div class="features-grid">
-
-      <!-- Build logs -->
-      <div class="feat feat-1 reveal-card">
-        <div class="feat-num">01</div>
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01m-.01 4h.01"/></svg>
-        </div>
-        <div class="feat-title">Build logs & progress tracking</div>
-        <div class="feat-desc">Every bolt, every setback, every milestone — documented in one place. Your build history, not just your highlight reel.</div>
-      </div>
-
-      <!-- Parts + costs -->
-      <div class="feat feat-2 reveal-card" style="transition-delay:0.08s">
-        <div class="feat-num">02</div>
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        </div>
-        <div class="feat-title">Parts list & cost tracker</div>
-        <div class="feat-desc">Know exactly what you've spent and what's going in next. Stop pretending the budget isn't blown — own it.</div>
-      </div>
-
-      <!-- Community -->
-      <div class="feat feat-3 reveal-card" style="transition-delay:0.12s">
-        <div class="feat-num">03</div>
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-        </div>
-        <div class="feat-title">Community feed</div>
-        <div class="feat-desc">Follow builds you respect. Get followed by people who get it. No algorithm trying to sell you something.</div>
-      </div>
-
-      <!-- Photos -->
-      <div class="feat feat-4 reveal-card" style="transition-delay:0.16s">
-        <div class="feat-num">04</div>
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-        </div>
-        <div class="feat-title">Photos & video</div>
-        <div class="feat-desc">Drop the footage. Before, during, after — let the build speak for itself.</div>
-      </div>
-
-      <!-- Link scrape -->
-      <div class="feat feat-5 feat-highlight reveal-card" style="transition-delay:0.2s">
-        <div class="feat-num">05</div>
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
-        </div>
-        <div class="feat-title">Paste a link. We do the rest.</div>
-        <div class="feat-desc">Copy any part link from Amazon, Summit, RockAuto — we pull the name, price, and image automatically. Add your affiliate link. Share it with your followers.</div>
-        <div class="scrape-demo">
-          <div class="scrape-url">https://www.amazon.com/dp/B08L5W...</div>
-          <div class="scrape-result">
-            <div class="scrape-img">
-              <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+    <div class="track-body">
+      <div class="track-col track-col-showcase reveal-card">
+        <div class="track-profile">
+          <div class="track-avatar-placeholder" aria-hidden="true"></div>
+          <div class="track-profile-meta">
+            <div class="track-profile-name-row">
+              <span class="track-profile-name">Matt Armstrong</span>
+              <span class="track-verified" aria-label="Verified">
+                <img src="assets/verified-mp.svg" width="18" height="18" alt="" decoding="async" aria-hidden="true" />
+              </span>
             </div>
-            <div>
-              <div class="scrape-name">KW Variant 3 Coilover Kit</div>
-              <div class="scrape-price">$1,849.00 — Amazon</div>
+            <span class="track-profile-handle">@mattarmostrong</span>
+          </div>
+        </div>
+
+        <div class="track-vehicle-card">
+          <div class="track-vehicle-media">
+            <img
+              class="track-vehicle-img"
+              src="assets/vehicle-cayenne.png"
+              width="1024"
+              height="1024"
+              alt="Porsche Cayenne 2011 — studio photo of yellow build"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="track-vehicle-caption">
+            <span class="track-vehicle-brand">Porsche</span>
+            <span class="track-vehicle-model">Cayenne 2011</span>
+          </div>
+        </div>
+
+        <div class="track-social">
+          <span class="track-social-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            251
+          </span>
+          <span class="track-social-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            1,250
+          </span>
+        </div>
+      </div>
+
+      <div class="track-col track-col-dashboard reveal-card">
+        <div class="track-tabs" role="tablist" aria-label="Build views">
+          <button type="button" class="track-tab is-active" role="tab" aria-selected="true" data-track-tab="parts" id="tab-parts">Parts</button>
+          <button type="button" class="track-tab" role="tab" aria-selected="false" data-track-tab="budget" id="tab-budget">Budget</button>
+          <button type="button" class="track-tab" role="tab" aria-selected="false" data-track-tab="activity" id="tab-activity">Activity</button>
+        </div>
+
+        <div class="track-tab-panel" id="panel-parts" role="tabpanel" aria-labelledby="tab-parts" data-track-panel="parts">
+          <div class="track-parts-toolbar">
+            <h3 class="track-parts-heading">Parts &amp; Components</h3>
+            <div class="track-view-toggle" role="group" aria-label="View mode">
+              <button type="button" class="track-view-btn" aria-pressed="false" data-view-mode="grid" aria-label="Grid view">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              </button>
+              <button type="button" class="track-view-btn is-active" aria-pressed="true" data-view-mode="list" aria-label="List view">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="track-accordions" id="track-parts-list">
+            <div class="track-accordion is-open">
+              <button type="button" class="track-accordion-trigger" aria-expanded="true" aria-controls="acc-panel-wheels" id="acc-wheels-btn">
+                <span class="track-accordion-chevron" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </span>
+                <span class="track-accordion-title">Wheels</span>
+                <span class="track-accordion-count">2</span>
+              </button>
+              <div class="track-accordion-panel" id="acc-panel-wheels" role="region" aria-labelledby="acc-wheels-btn">
+                <div class="track-accordion-inner">
+                  <div class="track-part-row">
+                    <div class="track-part-thumb" aria-hidden="true"><span>IMG</span></div>
+                    <div class="track-part-info">
+                      <div class="track-part-name">Porsche Wheel Center Cap — …</div>
+                      <div class="track-part-tags"><span>Wheels</span><span>MFG Numbers</span></div>
+                    </div>
+                    <div class="track-part-price">$66.99</div>
+                  </div>
+                  <div class="track-part-row">
+                    <div class="track-part-thumb track-part-thumb--photo" aria-hidden="true">
+                      <img
+                        src="assets/part-dtm-rw01-wheel.png"
+                        width="1024"
+                        height="967"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="track-part-info">
+                      <div class="track-part-name">DTM – RW01 – 17X8.5 ET3</div>
+                      <div class="track-part-tags"><span>Wheels</span><span>DTM Raderwerkz</span></div>
+                    </div>
+                    <div class="track-part-price">$330</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="track-accordion is-open">
+              <button type="button" class="track-accordion-trigger" aria-expanded="true" aria-controls="acc-panel-suspension" id="acc-susp-btn">
+                <span class="track-accordion-chevron" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                </span>
+                <span class="track-accordion-title">Suspension</span>
+                <span class="track-accordion-count">1</span>
+              </button>
+              <div class="track-accordion-panel" id="acc-panel-suspension" role="region" aria-labelledby="acc-susp-btn">
+                <div class="track-accordion-inner">
+                  <div class="track-part-row">
+                    <div class="track-part-thumb track-part-thumb--photo" aria-hidden="true">
+                      <img
+                        src="assets/part-eurowise-lift-kit.png"
+                        width="1024"
+                        height="682"
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                    <div class="track-part-info">
+                      <div class="track-part-name">GEN 2 – 2” LIFT KIT (STEEL SPRI…</div>
+                      <div class="track-part-tags"><span>Suspension</span><span>Eurowise Off Road</span></div>
+                    </div>
+                    <div class="track-part-price">$480</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
+        <div class="track-tab-panel" id="panel-budget" role="tabpanel" aria-labelledby="tab-budget" data-track-panel="budget" hidden>
+          <p class="track-panel-placeholder">Budget overview placeholder — final content coming soon.</p>
+        </div>
+
+        <div class="track-tab-panel" id="panel-activity" role="tabpanel" aria-labelledby="tab-activity" data-track-panel="activity" hidden>
+          <p class="track-panel-placeholder">Activity feed placeholder — final content coming soon.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -260,12 +349,12 @@
 
 <footer aria-label="Site footer">
   <div class="container footer-inner">
-    <div class="footer-logo"><img src="assets/MP-logo.svg" alt="MoneyPit" class="footer-logo-img" decoding="async" /></div>
+    <a href="index.html" class="footer-logo"><img src="assets/MP-logo.svg" alt="MoneyPit" class="footer-logo-img" decoding="async" /></a>
     <p class="footer-copy">© 2025 MoneyPit. Built by builders.</p>
     <ul class="footer-links">
-      <li><a href="#">Privacy</a></li>
-      <li><a href="#">Terms</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </footer>
